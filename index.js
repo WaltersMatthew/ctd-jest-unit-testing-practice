@@ -1,19 +1,17 @@
 function fahrenheitToCelsius(degreesFahrenheit) {
     // The equation to convert from fahrenheit to celsius is
     //  (<degrees in fahrenheit> - 32) * 5/9 = <degrees in celsius>
-    let degreesCelsius;
+    let degreesCelsius = ((degreesFahrenheit - 32) * 5) / 9;
 
-    (degreesFahrenheit - 32) * 5/9;
-
-    return degreesFahrenheit;
+    return degreesCelsius;
 }
 
 function celsiusToFahrenheit(degreesCelsius) {
     // The equation to convert from celsius to fahrenheit is
     //  (<degrees in celsius> * 9/5) + 32 = <degrees in fahrenheit>
-    let degreesFahrenheit = (degreesCelsius * 9/5) + 32;
+    let degreesFahrenheit = (degreesCelsius * 9) / 5 + 32;
 
-    return degreesFarenheit;
+    return degreesFahrenheit;
 }
 
 function getFirstStringFromArray(list) {
@@ -25,8 +23,8 @@ function getFirstStringFromArray(list) {
 
     let index = 0;
 
-    while(index < list.length) {
-        if (typeof list[index] === 'string') {
+    while (index < list.length) {
+        if (typeof list[index] === "string") {
             return list[index];
         }
         index++;
@@ -35,9 +33,8 @@ function getFirstStringFromArray(list) {
     return null;
 }
 
-
 module.exports = {
     fahrenheitToCelsius,
     celsiusToFahrenheit,
-    getFirstStringFromArray
-}
+    getFirstStringFromArray,
+};
